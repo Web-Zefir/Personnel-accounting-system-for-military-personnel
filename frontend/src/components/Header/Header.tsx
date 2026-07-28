@@ -1,3 +1,4 @@
+// src/components/Header/Header.tsx
 import './Header.css';
 
 interface HeaderProps {
@@ -9,7 +10,7 @@ const Header = ({ onToggleLeftSidebar, onToggleRightSidebar }: HeaderProps) => {
   return (
     <header className="top-header">
       <div className="left-section">
-        <button className="menu-trigger" onClick={onToggleLeftSidebar}>
+        <button className="menu-trigger" onClick={onToggleLeftSidebar} title="Переключить сайдбар">
           ☰
         </button>
         <span className="header-title">Кадровая система</span>
@@ -19,11 +20,11 @@ const Header = ({ onToggleLeftSidebar, onToggleRightSidebar }: HeaderProps) => {
           <span className="admin-link">@admin</span>
           <span className="breadcrumbs-separator">/</span>
           <span className="breadcrumbs-text">00 список кадров</span>
-          <span className="breadcrumbs-text muted">(будет меняться)</span>
+          <span className="breadcrumbs-text muted">(управление)</span>
         </span>
       </div>
       <div className="right-section">
-        <button className="menu-trigger" onClick={onToggleRightSidebar}>
+        <button className="menu-trigger" onClick={onToggleRightSidebar} title="Параметры">
           ⚙
         </button>
       </div>
