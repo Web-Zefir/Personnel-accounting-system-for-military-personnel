@@ -1,0 +1,46 @@
+.widget {
+  background: #32323f;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #6b6b78;
+}
+
+.widget:hover {
+  background: #424258;
+}
+
+.widget-main {
+  color: #fff;
+}
+
+.widget-menu-btn {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.widget-menu {
+  background: #32323f;
+  list-style: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  position: absolute;
+  z-index: 10;
+  border: 1px solid #6b6b78;
+}
+
+.widget-menu li {
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.widget-menu li:hover {
+  background: #424258;
+}
