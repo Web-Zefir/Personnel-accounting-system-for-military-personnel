@@ -1,9 +1,11 @@
+import React from 'react';
 import './LeftSidebar.css';
+import { DotsIcon } from '../../../icons/icons';
 
 interface NavItem {
   id: string;
   title: string;
-  type?: 'table' | 'card' | 'custom';
+  type?: 'table' | 'card';
 }
 
 interface LeftSidebarProps {
@@ -15,25 +17,23 @@ interface LeftSidebarProps {
 
 export const LeftSidebar: React.FC<LeftSidebarProps> = ({
   isOpen = true,
-  activeId = 'dogs-dashboard',
+  activeId = 'spisok',
   onSelect,
   onAddNew,
 }) => {
   const pages: NavItem[] = [
-    { id: 'dogs-dashboard', title: 'Dogs Dashboard', type: 'table' },
-    { id: 'dogs', title: 'Dogs', type: 'table' },
-    { id: 'owners', title: 'Owners', type: 'card' },
+    { id: 'spisok', title: 'список', type: 'table' },
   ];
 
   const tools = [
-    { id: 'access-rules', label: 'Access Rules', icon: '👁' },
-    { id: 'raw-data', label: 'Raw Data', icon: '💾' },
-    { id: 'document-history', label: 'Document History', icon: '🕒' },
-    { id: 'code-view', label: 'Code View', icon: '</>' },
+    { id: 'access-rules', label: 'Правила доступа', icon: '👁' },
+    { id: 'raw-data', label: 'Исходные данные', icon: '💾' },
+    { id: 'document-history', label: 'История документа', icon: '🕒' },
+    { id: 'code-view', label: 'Просмотр кода', icon: '</>' },
   ];
 
   return (
-    <aside className={`grist-sidebar ${isOpen ? 'expanded' : 'collapsed'}`}>
+    <aside className={`app-sidebar ${isOpen ? 'expanded' : 'collapsed'}`}>
       <div className="sidebar-top-action">
         <button className="add-new-btn" onClick={onAddNew}>
           <span className="add-btn-text">Добавить</span>
@@ -55,7 +55,11 @@ export const LeftSidebar: React.FC<LeftSidebarProps> = ({
                   {page.type === 'card' ? 'O' : 'D'}
                 </span>
                 <span className="item-title">{page.title}</span>
-                {isActive && <span className="item-menu-dots">•••</span>}
+                {isActive && (
+                  <button className="item-menu-dots" aria-label="Параметры">
+                    <DotsIcon />
+                  </button>
+                )}
               </div>
             );
           })}
@@ -65,7 +69,7 @@ export const LeftSidebar: React.FC<LeftSidebarProps> = ({
       <div className="sidebar-divider" />
 
       <div className="sidebar-section tools-section">
-        <div className="section-header">TOOLS</div>
+        <div className="section-header">ИНСТРУМЕНТЫ</div>
         <div className="section-list">
           {tools.map((tool) => (
             <div key={tool.id} className="sidebar-tool-item">
@@ -80,10 +84,7 @@ export const LeftSidebar: React.FC<LeftSidebarProps> = ({
 
       <div className="sidebar-footer">
         <div className="sidebar-tool-item">
-          <span className="tool-label">Tour of this Doc...</span>
-        </div>
-        <div className="sidebar-tool-item">
-          <span className="tool-label">Help Center</span>
+          <span className="tool-label">Справочный центр</span>
         </div>
       </div>
     </aside>

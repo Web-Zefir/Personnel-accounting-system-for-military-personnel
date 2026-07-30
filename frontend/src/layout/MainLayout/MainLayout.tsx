@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import Header from '../../components/Header/Header';
-import './MainLayout.css';
 import LeftSidebar from '../../components/Sidebars/LeftSidebar/LeftSidebar';
+import RightSidebar from '../../components/Sidebars/RightSidebar/RightSidebar';
+import TableView from '../../components/TableView/TableView';
+import './MainLayout.css';
 
 interface MainLayoutProps {
   children?: React.ReactNode;
@@ -9,30 +11,34 @@ interface MainLayoutProps {
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const [isLeftSidebarOpen, setIsLeftSidebarOpen] = useState(true);
-  
+  const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
+
   const handleToggleLeftSidebar = () => {
     setIsLeftSidebarOpen((prev) => !prev);
   };
 
+  const handleToggleRightSidebar = () => {
+    setIsRightSidebarOpen((prev) => !prev);
+  };
+
   return (
-    <div className="main-layout">
-      <Header 
-        onToggleLeftSidebar={handleToggleLeftSidebar} 
+    <div className="app-container">
+      <Header
+        isLeftSidebarOpen={isLeftSidebarOpen}
+        isRightSidebarOpen={isRightSidebarOpen}
+        onToggleLeftSidebar={handleToggleLeftSidebar}
+        onToggleRightSidebar={handleToggleRightSidebar}
       />
 
-      <div className="main-layout-body">
-        <LeftSidebar
-          isOpen={isLeftSidebarOpen}
-        />
+      <main className="main-layout-body">
+        <LeftSidebar isOpen={isLeftSidebarOpen} />
 
-        <main className="main-layout-content">
-          {children || (
-            <div className="layout-placeholder">
-              <p>Здесь будет отображаться таблица</p>
-            </div>
-          )}
-        </main>
-      </div>
+        <div className="main-layout-content">
+          {children || <TableView />}
+        </div>
+
+        <RightSidebar isOpen={isRightSidebarOpen} />
+      </main>
     </div>
   );
 };

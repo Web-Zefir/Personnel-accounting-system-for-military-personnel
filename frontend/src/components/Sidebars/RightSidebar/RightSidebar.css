@@ -1,0 +1,38 @@
+.app-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #22222a; 
+  border-right: 2px solid #2e2e38; 
+  box-sizing: border-box;
+  user-select: none;
+  flex-shrink: 0;
+  transition: width 0.25s ease-in-out, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.app-sidebar.expanded {
+  width: 210px;
+}
+
+.app-sidebar.collapsed {
+  width: 0
+}
+
+.sidebar-top-action {
+  padding: 12px 10px;
+}
+
+.section-header {
+  padding: 6px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #71717a;
+  text-transform: uppercase;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background-color: #2e2e38;
+  margin: 6px 10px;
+}

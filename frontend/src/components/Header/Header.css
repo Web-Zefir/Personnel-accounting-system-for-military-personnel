@@ -58,6 +58,12 @@
 
 .breadcrumb-doc {
   color: var(--color-text-secondary, #888888);
+  cursor: pointer;
+}
+
+.breadcrumb-doc:hover {
+  transition: all 0.3s ease;
+  color: var(--color-text-highlight, #888888);
 }
 
 .breadcrumb-active {

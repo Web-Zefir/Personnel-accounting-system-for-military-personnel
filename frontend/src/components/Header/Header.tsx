@@ -14,7 +14,8 @@ import './Header.css';
 interface HeaderProps {
   documentName?: string;
   tableName?: string;
-  userInitial?: string;
+  isLeftSidebarOpen?: boolean; 
+  isRightSidebarOpen?: boolean; 
   onToggleLeftSidebar?: () => void;
   onToggleRightSidebar?: () => void;
 }
@@ -22,19 +23,19 @@ interface HeaderProps {
 export const Header: React.FC<HeaderProps> = ({
   documentName = '00 spisok',
   tableName = 'список',
+  isLeftSidebarOpen = true,
+  isRightSidebarOpen = false,
   onToggleLeftSidebar,
   onToggleRightSidebar,
 }) => {
   return (
     <header className="app-header">
-      {/* Левая секция: кнопка сайдбара и путь */}
       <div className="header-left">
         <button 
           className="header-icon-btn" 
           onClick={onToggleLeftSidebar}
-          title="Свернуть/Развернуть левую панель"
         >
-          <LeftSidebarIcon />
+          {isLeftSidebarOpen ? <LeftSidebarIcon /> : <RightSidebarIcon />}
         </button>
 
         <nav className="breadcrumbs">
@@ -49,7 +50,6 @@ export const Header: React.FC<HeaderProps> = ({
         </nav>
       </div>
 
-      {/* Правая секция: инструменты и аватар */}
       <div className="header-right">
         <button className="header-icon-btn" title="Отменить (Ctrl+Z)">
           <UndoIcon />
@@ -78,9 +78,8 @@ export const Header: React.FC<HeaderProps> = ({
         <button 
           className="header-icon-btn" 
           onClick={onToggleRightSidebar}
-          title="Открыть панель свойств"
         >
-          <RightSidebarIcon />
+          {isRightSidebarOpen ? <RightSidebarIcon /> : <LeftSidebarIcon />}
         </button>
       </div>
     </header>
