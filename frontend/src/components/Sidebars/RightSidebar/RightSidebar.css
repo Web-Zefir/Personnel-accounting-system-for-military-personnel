@@ -1,4 +1,4 @@
-.app-sidebar {
+.right-sidebar {
   display: flex;
   flex-direction: column;
   background-color: #22222a; 
@@ -10,11 +10,11 @@
   overflow: hidden;
 }
 
-.app-sidebar.expanded {
+.right-sidebar.expanded {
   width: 210px;
 }
 
-.app-sidebar.collapsed {
+.right-sidebar.collapsedd {
   width: 0
 }
 

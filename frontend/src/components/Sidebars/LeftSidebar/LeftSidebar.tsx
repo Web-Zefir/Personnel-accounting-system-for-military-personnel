@@ -26,10 +26,10 @@ export const LeftSidebar: React.FC<LeftSidebarProps> = ({
   ];
 
   const tools = [
-    { id: 'access-rules', label: 'Правила доступа', icon: '👁' },
-    { id: 'raw-data', label: 'Исходные данные', icon: '💾' },
-    { id: 'document-history', label: 'История документа', icon: '🕒' },
-    { id: 'code-view', label: 'Просмотр кода', icon: '</>' },
+    { id: 'access-rules', label: 'Правила доступа' },
+    { id: 'raw-data', label: 'Исходные данные' },
+    { id: 'document-history', label: 'История документа', },
+    { id: 'code-view', label: 'Просмотр кода' },
   ];
 
   return (
@@ -73,7 +73,6 @@ export const LeftSidebar: React.FC<LeftSidebarProps> = ({
         <div className="section-list">
           {tools.map((tool) => (
             <div key={tool.id} className="sidebar-tool-item">
-              <span className="tool-icon">{tool.icon}</span>
               <span className="tool-label">{tool.label}</span>
             </div>
           ))}

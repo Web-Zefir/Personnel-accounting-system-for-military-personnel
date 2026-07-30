@@ -177,8 +177,11 @@
   padding-bottom: 10px;
 }
 
-.collapsed .sidebar-nav-item,
-.collapsed .sidebar-tool-item {
+.collapsed .sidebar-nav-item{
   justify-content: center;
   padding: 0;
+}
+
+.collapsed .sidebar-tool-item {
+  display: none;
 }

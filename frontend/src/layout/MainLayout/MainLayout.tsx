@@ -6,7 +6,7 @@ import TableView from '../../components/TableView/TableView';
 import './MainLayout.css';
 
 interface MainLayoutProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
@@ -14,11 +14,11 @@ export const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const [isRightSidebarOpen, setIsRightSidebarOpen] = useState(false);
 
   const handleToggleLeftSidebar = () => {
-    setIsLeftSidebarOpen((prev) => !prev);
+    setIsLeftSidebarOpen(prev => !prev);
   };
 
   const handleToggleRightSidebar = () => {
-    setIsRightSidebarOpen((prev) => !prev);
+    setIsRightSidebarOpen(prev => !prev);
   };
 
   return (

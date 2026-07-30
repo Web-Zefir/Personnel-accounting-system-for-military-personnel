@@ -1,8 +1,5 @@
 import React from 'react';
 import './RightSidebar.css';
-import { DotsIcon } from '../../../icons/icons';
-
-
 
 interface LeftSidebarProps {
   isOpen: boolean;
@@ -13,7 +10,7 @@ export const RightSidebar: React.FC<LeftSidebarProps> = ({
 }) => {
 
   return (
-    <aside className={`app-sidebar ${isOpen ? 'expanded' : 'collapsed'}`}>
+    <aside className={`right-sidebar ${isOpen ? 'expanded' : 'collapsedd'}`}>
       <div className="sidebar-top-action"/>
       <div className="sidebar-divider" />
       <div className="section-header">Заглушка</div>
