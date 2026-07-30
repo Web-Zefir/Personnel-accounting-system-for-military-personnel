@@ -5,7 +5,7 @@ interface IconProps {
   className?: string;
 }
 
-export const LeftSidebar: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const LeftSidebarIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -24,7 +24,7 @@ export const LeftSidebar: React.FC<IconProps> = ({ size = '1em', className }) =>
   </svg>
 );
 
-export const Layers: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const LayersIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -43,7 +43,7 @@ export const Layers: React.FC<IconProps> = ({ size = '1em', className }) => (
   </svg>
 );
 
-export const RightSidebar: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const RightSidebarIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -63,7 +63,7 @@ export const RightSidebar: React.FC<IconProps> = ({ size = '1em', className }) =
   </svg>
 );
 
-export const Undo: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const UndoIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -82,7 +82,7 @@ export const Undo: React.FC<IconProps> = ({ size = '1em', className }) => (
   </svg>
 );
 
-export const Redo: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const RedoIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -102,7 +102,7 @@ export const Redo: React.FC<IconProps> = ({ size = '1em', className }) => (
   </svg>
 );
 
-export const Divider: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const DividerIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -118,7 +118,7 @@ export const Divider: React.FC<IconProps> = ({ size = '1em', className }) => (
   </svg>
 );
 
-export const Search: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const SearchIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -137,7 +137,7 @@ export const Search: React.FC<IconProps> = ({ size = '1em', className }) => (
   </svg>
 );
 
-export const Notification: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const NotificationIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}
@@ -157,7 +157,7 @@ export const Notification: React.FC<IconProps> = ({ size = '1em', className }) =
   </svg>
 );
 
-export const Bell: React.FC<IconProps> = ({ size = '1em', className }) => (
+export const BellIcon: React.FC<IconProps> = ({ size = '1em', className }) => (
   <svg
     width={size}
     height={size}

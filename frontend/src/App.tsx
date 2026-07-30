@@ -1,13 +1,11 @@
+import React from 'react';
 import './App.css';
-import Header from './layout/Header/Header';
+import MainLayout from './layout/MainLayout/MainLayout';
 
-function App() {
-
+export const App: React.FC = () => {
   return (
-    <>
-      <Header />
-    </>
+    <MainLayout />
   );
-}
+};
 
 export default App;

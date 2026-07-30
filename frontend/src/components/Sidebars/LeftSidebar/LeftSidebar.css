@@ -1,0 +1,184 @@
+.grist-sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: #22222a; 
+  border-right: 2px solid #2e2e38; 
+  box-sizing: border-box;
+  user-select: none;
+  flex-shrink: 0;
+  transition: width 0.25s ease-in-out, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.grist-sidebar.expanded {
+  width: 210px;
+}
+
+.grist-sidebar.collapsed {
+  width: 60px;
+}
+
+.sidebar-top-action {
+  padding: 12px 10px;
+}
+
+.add-new-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 36px;
+  padding: 0 12px;
+  background-color: #16b376;
+  color: #ffffff;
+  border: 1px solid #34c796a4;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.25s ease;
+}
+
+.add-new-btn:hover {
+  transition: all 0.4s ease;
+  background-color: #34c796a4;
+}
+
+.collapsed .add-new-btn {
+  justify-content: center;
+  padding: 0;
+}
+
+.collapsed .add-btn-text {
+  display: none;
+}
+
+.add-btn-icon {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.sidebar-section {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0;
+}
+
+.section-header {
+  padding: 6px 12px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  color: #71717a;
+  text-transform: uppercase;
+}
+
+.collapsed .section-header {
+  display: none;
+}
+
+.sidebar-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 32px;
+  padding: 0 10px;
+  margin: 1px 6px;
+  border-radius: 3px;
+  color: #a1a1aa;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sidebar-nav-item:hover {
+  background-color: #2d2d38;
+  color: #ffffff;
+}
+
+
+.item-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  background-color: #3f3f46;
+  color: #d4d4d8;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sidebar-nav-item.active .item-badge {
+  background-color: #52525b;
+  color: #ffffff;
+}
+
+.item-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-menu-dots {
+  font-size: 10px;
+  color: #71717a;
+}
+
+.tools-section {
+  flex: 1;
+}
+
+.sidebar-tool-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 28px;
+  padding: 0 12px;
+  color: #8e8e93;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sidebar-tool-item:hover {
+  color: #ffffff;
+}
+
+.tool-icon {
+  font-size: 13px;
+  width: 16px;
+  text-align: center;
+}
+
+.tool-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-divider {
+  height: 1px;
+  background-color: #2e2e38;
+  margin: 6px 10px;
+}
+
+.sidebar-footer {
+  padding-bottom: 10px;
+}
+
+.collapsed .item-title,
+.collapsed .item-menu-dots,
+.collapsed .tool-label,
+.collapsed .sidebar-divider {
+  display: none;
+}
+
+.collapsed .sidebar-nav-item,
+.collapsed .sidebar-tool-item {
+  justify-content: center;
+  padding: 0;
+}
